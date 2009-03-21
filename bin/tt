@@ -18,7 +18,7 @@ while !ARGV.empty?
     puts "Error: file '#{treetop_file}' doesn't exist\n\n"
     exit(2) 
   end
-  if ARGV.size >= 2 && ARGV[1] == '-o'
+  if ARGV.size >= 2 && ARGV[0] == '-o'
     ARGV.shift	  # explicit output file name option
     compiler.compile(treetop_file, ARGV.shift)
   else
